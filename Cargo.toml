@@ -1,0 +1,18 @@
+[package]
+authors = ["Ferdia McKeogh <ferdia@mckeogh.tech>"]
+edition = "2018"
+readme = "README.md"
+name = "bbqtest-thumbv6"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.8"
+cortex-m-semihosting = "0.3.3"
+panic-halt = "0.2.0"
+bbqueue = { path = "/Users/ferdiamckeogh/Desktop/bbqueue/core", features = ["cortex-m"] }
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
